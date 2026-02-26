@@ -3,11 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://philippkraus-bra.github.io/tigre-checkout-dashboard/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philippkraus-bra/tigre-checkout-dashboard"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "export-data": "node scripts/export-data.mjs",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },

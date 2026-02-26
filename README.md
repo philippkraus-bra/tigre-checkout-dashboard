@@ -1,5 +1,9 @@
 # Tigre Fashion — Checkout Drop-Off Visualizer
 
+**Live demo:** https://philippkraus-bra.github.io/tigre-checkout-dashboard/
+**Source code:** https://github.com/philippkraus-bra/tigre-checkout-dashboard
+**Dataset:** [`public/transactions.json`](./public/transactions.json) — 650 synthetic records, directly downloadable
+
 Interactive analytics dashboard for diagnosing why **22% of customers fail to complete checkout**.
 Visualizes the payment funnel stage-by-stage and surfaces key performance red flags.
 
@@ -47,6 +51,12 @@ Try these filter combinations to surface built-in insights:
 | Amount: **>$200** + Payment: **Credit Card** | Auth rate drops to ~68% |
 | Payment: **PSE** | Highest auth rate (bank transfer, lower fraud) |
 | No filters | Peru's share is ~20% but punches above its weight in declines |
+
+---
+
+## Actionable Insights Summary
+
+> Peru's authorization rate (~51%) sits ~20 percentage points below Colombia (~71%), likely caused by sub-optimal processor routing for Peruvian issuers — this single market drives a disproportionate share of total declines and is the highest-ROI fix available. High-value credit card transactions (>$200) compound the problem with a further ~8pp auth-rate penalty, suggesting 3DS friction and issuer risk-scoring thresholds that could be mitigated through soft-decline retry flows or by surfacing PSE as an alternative payment method for Colombian users. OXXO cash-pay vouchers show a ~47% abandonment rate after voucher generation, recoverable through timed SMS/push reminders and shorter expiry windows; this segment is uniquely addressable without any processor negotiation. Collectively, fixing Peru routing, adding card-retry logic for high-value transactions, and recovering OXXO abandonment could lift overall checkout completion from ~56% toward ~70%+.
 
 ---
 
